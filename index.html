@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShadowMart</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+    }
+    header {
+      background: #111;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 0 10px #00ff99;
+    }
+    header h1 {
+      color: #00ff99;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+    nav a {
+      color: #aaa;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #00ff99;
+      text-shadow: 0 0 5px #00ff99;
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: #000;
+      color: #00ff99;
+      box-shadow: inset 0 0 20px #00ff99;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem;
+    }
+    .product {
+      background: #1a1a1a;
+      padding: 1rem;
+      border: 1px solid #333;
+      border-radius: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 10px #00ff99;
+    }
+    .product h3 {
+      color: #00ff99;
+      margin-top: 0.5rem;
+    }
+    .reviews, .faq {
+      padding: 2.5rem;
+      background: #111;
+    }
+    .review, .faq-item {
+      background: #1a1a1a;
+      margin-bottom: 1.5rem;
+      padding: 1.2rem;
+      border-radius: 6px;
+      border-left: 4px solid #00ff99;
+    }
+    .contact {
+      background: #0d0d0d;
+      padding: 3rem;
+      text-align: center;
+    }
+    .contact h2 {
+      color: #00ff99;
+      margin-bottom: 1rem;
+    }
+    .contact p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    .contact a {
+      color: #00ff99;
+      text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #111;
+      color: #555;
+      font-size: 0.9rem;
+    }
+    .footer p span {
+      color: #00ff99;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ShadowMart</h1>
+    <nav>
+      <a href="#home">Главная</a>
+      <a href="#catalog">Каталог</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Добро пожаловать в ShadowMart</h2>
+    <p>Там, где царит тишина и анонимность — мы вне правил.</p>
+  </section>
+
+  <section id="catalog" class="products">
+    <div class="product">
+      <h3>Ночной Экстаз</h3>
+      <p>Смесь для бессонных ночей. 5г / 250 ₿</p>
+    </div>
+    <div class="product">
+      <h3>Призрачный Порошок</h3>
+      <p>Тишина в порошке. 3г / 180 ₿</p>
+    </div>
+    <div class="product">
+      <h3>Капли Сновидений</h3>
+      <p>Жидкие видения. 10мл / 300 ₿</p>
+    </div>
+    <div class="product">
+      <h3>Дымовая Завеса</h3>
+      <p>Испарения для забытых мыслей. 2г / 120 ₿</p>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews">
+    <h2>Отзывы клиентов</h2>
+    <div class="review">
+      <p><strong>AnonWolf:</strong> Доставка быстрая. Качество — топ. Уважение.</p>
+    </div>
+    <div class="review">
+      <p><strong>NightCrawler:</strong> Капли Сновидений открыли глаза. Буду заказывать ещё.</p>
+    </div>
+    <div class="review">
+      <p><strong>NoTrace:</strong> Надёжно и безопасно. Ребята знают своё дело.</p>
+    </div>
+    <div class="review">
+      <p><strong>HexShifter:</strong> Всё на уровне — упаковка, скорость, анонимность.</p>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <h2>Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <p><strong>Как сделать заказ?</strong><br>Через зашифрованный мессенджер после прохождения верификации.</p>
+    </div>
+    <div class="faq-item">
+      <p><strong>Какая валюта принимается?</strong><br>Только криптовалюта. Без исключений.</p>
+    </div>
+    <div class="faq-item">
+      <p><strong>Это безопасно?</strong><br>Все посылки вакуумно упакованы и отправляются через безопасные каналы.</p>
+    </div>
+    <div class="faq-item">
+      <p><strong>Можно отследить заказ?</strong><br>После отправки получите криптокод для отслеживания.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Контакты</h2>
+    <p>Для доступа и поддержки:</p>
+    <p><strong>Onion-ссылка:</strong> <a href="#">shadowmartxyz.onion</a></p>
+    <p><strong>PGP Email:</strong> <a href="mailto:shadowdrop@protonmail.com">shadowdrop@protonmail.com</a></p>
+    <p><strong>XMPP:</strong> darkbot@jabber.darkweb.org</p>
+  </section>
+
+  <section class="footer">
+    <p>© <span>ShadowMart</span> – Без следов. Без имён. Только шёпот.</p>
+  </section>
+</body>
+</html>
